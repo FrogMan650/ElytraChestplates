@@ -1,6 +1,9 @@
 package net.Lucas.elytrachestplates;
 
 import com.mojang.logging.LogUtils;
+import net.Lucas.elytrachestplates.item.ModCreativeModeTabs;
+import net.Lucas.elytrachestplates.item.ModItems;
+import net.Lucas.elytrachestplates.loot.ModLootModifier;
 import net.minecraft.client.Minecraft;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.world.food.FoodProperties;
@@ -36,6 +39,12 @@ public class ElytraChestplates
     public ElytraChestplates()
     {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
+
+        ModCreativeModeTabs.register(modEventBus);
+
+        ModItems.register(modEventBus);
+
+        ModLootModifier.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
 

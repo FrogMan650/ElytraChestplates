@@ -18,20 +18,11 @@ public class ModItems {
     //Epic = light_purple text
     //when enchanted they go up a rarity tier
 
-//gems
-    public static final RegistryObject<Item> SAPPHIRE = ITEMS.register("sapphire",
-            () -> new Item(new Item.Properties()));
-    public static final RegistryObject<Item> OPAL = ITEMS.register("opal",
-            () -> new Item(new Item.Properties()));
-    public static final RegistryObject<Item> JADE = ITEMS.register("jade",
-            () -> new Item(new Item.Properties()));
-    public static final RegistryObject<Item> RUBY = ITEMS.register("ruby",
-            () -> new Item(new Item.Properties()));
-    public static final RegistryObject<Item> ONYX = ITEMS.register("onyx",
-            () -> new Item(new Item.Properties().fireResistant().rarity(Rarity.UNCOMMON)));
-
-
-
+    public static final RegistryObject<Item> DIAMOND_ELYTYRA_CHESTPLATE = ITEMS.register("diamond_elytra_chestplate",
+            () -> new DiamondElytraChestplate(ArmorMaterials.DIAMOND, ArmorItem.Type.CHESTPLATE, new Item.Properties().rarity(Rarity.UNCOMMON)));
+    public static final RegistryObject<Item> NETHERITE_ELYTRA_CHESTPLATE = ITEMS.register("netherite_elytra_chestplate",
+            () -> new NetheriteElytraChestplate(ArmorMaterials.NETHERITE, ArmorItem.Type.CHESTPLATE, new Item.Properties().rarity(Rarity.UNCOMMON).fireResistant()));
+    public static final RegistryObject<Item> ELYTRA_UPGRADE_SMITHING_TEMPLATE = ITEMS.register("elytra_upgrade_smithing_template", CustomSmithingTemplateItem::createElytraChestplateUpgradeTemplate);
 
 
     public static void register(IEventBus eventBus) {

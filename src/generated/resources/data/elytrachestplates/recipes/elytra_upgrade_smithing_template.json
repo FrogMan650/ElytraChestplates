@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "elytrachestplates:elytra_upgrade_smithing_template"
+    },
+    "B": {
+      "item": "minecraft:purpur_block"
+    },
+    "S": {
+      "item": "minecraft:diamond"
+    }
+  },
+  "pattern": [
+    "SAS",
+    "SBS",
+    "SSS"
+  ],
+  "result": {
+    "item": "elytrachestplates:elytra_upgrade_smithing_template"
+  }
+}

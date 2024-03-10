@@ -1,0 +1,10 @@
+{
+  "type": "elytrachestplates:add_item",
+  "conditions": [
+    {
+      "condition": "forge:loot_table_id",
+      "loot_table_id": "minecraft:chests/end_city_treasure"
+    }
+  ],
+  "item": "elytrachestplates:elytra_upgrade_smithing_template"
+}

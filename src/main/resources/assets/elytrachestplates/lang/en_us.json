@@ -1,0 +1,11 @@
+{
+  "creativetab.elytrachestplates.elytra_tab": "Elytras",
+  "item.elytrachestplates.diamond_elytra_chestplate": "Diamond Elytra Chestplate",
+  "item.elytrachestplates.netherite_elytra_chestplate": "Netherite Elytra Chestplate",
+
+  "item.elytrachestplates.elytra_smithing_template": "§eSmithing Template",
+  "item.elytrachestplates.smithing_template.elytra_upgrade": "Diamond or Netherite Chestplate",
+  "upgrade.elytrachestplates.elytra_upgrade": "Elytra Chestplate Upgrade",
+  "item.elytrachestplates.smithing_template.elytra_upgrade.base_slot_description": "Add Diamond or Netherite Chestplate",
+  "item.elytrachestplates.smithing_template.elytra_upgrade.additions_slot_description": "Add Elytra"
+}
