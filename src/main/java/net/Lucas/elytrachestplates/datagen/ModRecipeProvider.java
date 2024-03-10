@@ -9,13 +9,15 @@ import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.common.crafting.conditions.IConditionBuilder;
 
+import java.util.function.Consumer;
+
 public class ModRecipeProvider extends RecipeProvider implements IConditionBuilder {
     public ModRecipeProvider(PackOutput pOutput) {
         super(pOutput);
     }
 
     @Override
-    protected void buildRecipes(RecipeOutput pRecipeOutput) {
+    protected void buildRecipes(Consumer<FinishedRecipe> pRecipeOutput) {
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.ELYTRA_UPGRADE_SMITHING_TEMPLATE.get(), 2)
                 .pattern("SAS")
                 .pattern("SBS")
@@ -32,7 +34,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         netheriteSmithing(pRecipeOutput, Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE, ModItems.DIAMOND_ELYTRA_CHESTPLATE.get(), Items.NETHERITE_INGOT, RecipeCategory.MISC, ModItems.NETHERITE_ELYTRA_CHESTPLATE.get());
     }
 
-    protected static void netheriteSmithing(RecipeOutput pRecipeOutput, Item modTemplate, Item itemToUpgrade, Item itemToUpgradeWith, RecipeCategory pCategory, Item pResultItem) {
+    protected static void netheriteSmithing(Consumer<FinishedRecipe> pRecipeOutput, Item modTemplate, Item itemToUpgrade, Item itemToUpgradeWith, RecipeCategory pCategory, Item pResultItem) {
         SmithingTransformRecipeBuilder.smithing(Ingredient.of(modTemplate), Ingredient.of(itemToUpgrade), Ingredient.of(itemToUpgradeWith), pCategory, pResultItem).unlocks("has_netherite_ingot", has(itemToUpgradeWith)).save(pRecipeOutput, getItemName(pResultItem) + "_smithing_" + getItemName(itemToUpgradeWith));
     }
 }

@@ -13,7 +13,6 @@ import net.minecraft.client.renderer.entity.ItemRenderer;
 import net.minecraft.client.renderer.entity.RenderLayerParent;
 import net.minecraft.client.renderer.entity.layers.RenderLayer;
 import net.minecraft.client.renderer.texture.OverlayTexture;
-import net.minecraft.client.resources.PlayerSkin;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.LivingEntity;
@@ -38,11 +37,10 @@ public class DiamondElytraLayer<T extends LivingEntity, M extends EntityModel<T>
          ResourceLocation resourcelocation;
          if (pLivingEntity instanceof AbstractClientPlayer) {
             AbstractClientPlayer abstractclientplayer = (AbstractClientPlayer)pLivingEntity;
-            PlayerSkin playerskin = abstractclientplayer.getSkin();
-            if (playerskin.elytraTexture() != null) {
-               resourcelocation = playerskin.elytraTexture();
-            } else if (playerskin.capeTexture() != null && abstractclientplayer.isModelPartShown(PlayerModelPart.CAPE)) {
-               resourcelocation = playerskin.capeTexture();
+            if (abstractclientplayer.isElytraLoaded() && abstractclientplayer.getElytraTextureLocation() != null) {
+               resourcelocation = abstractclientplayer.getElytraTextureLocation();
+            } else if (abstractclientplayer.isCapeLoaded() && abstractclientplayer.getCloakTextureLocation() != null && abstractclientplayer.isModelPartShown(PlayerModelPart.CAPE)) {
+               resourcelocation = abstractclientplayer.getCloakTextureLocation();
             } else {
                resourcelocation = getElytraTexture(itemstack, pLivingEntity);
             }

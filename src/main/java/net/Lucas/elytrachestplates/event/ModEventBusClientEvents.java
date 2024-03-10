@@ -5,9 +5,7 @@ import net.Lucas.elytrachestplates.entity.client.DiamondElytraLayer;
 import net.Lucas.elytrachestplates.entity.client.DiamondElytraModel;
 import net.Lucas.elytrachestplates.entity.client.NetheriteElytraLayer;
 import net.Lucas.elytrachestplates.entity.client.NetheriteElytraModel;
-import net.minecraft.client.renderer.entity.EntityRenderer;
 import net.minecraft.client.renderer.entity.LivingEntityRenderer;
-import net.minecraft.client.resources.PlayerSkin;
 import net.minecraft.world.entity.EntityType;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.client.event.EntityRenderersEvent;
@@ -24,16 +22,15 @@ public class ModEventBusClientEvents {
 
     @SubscribeEvent @SuppressWarnings({"unchecked"})
     public static void addPlayerLayers(EntityRenderersEvent.AddLayers event) {
-        for (PlayerSkin.Model skin : event.getSkins()) {
-
-            LivingEntityRenderer renderer = event.getPlayerSkin(skin);
+        for (String skin : event.getSkins()) {
+            LivingEntityRenderer renderer = event.getSkin(skin);
 
             if (renderer != null) {
                 renderer.addLayer(new DiamondElytraLayer(renderer, event.getEntityModels()));
                 renderer.addLayer(new NetheriteElytraLayer(renderer, event.getEntityModels()));
             }
         }
-        EntityRenderer renderer = event.getEntityRenderer(EntityType.ARMOR_STAND);
+        LivingEntityRenderer renderer = event.getRenderer(EntityType.ARMOR_STAND);
         if (renderer != null) {
             ((LivingEntityRenderer)renderer).addLayer(new DiamondElytraLayer(((LivingEntityRenderer)renderer), event.getEntityModels()));
             ((LivingEntityRenderer)renderer).addLayer(new NetheriteElytraLayer(((LivingEntityRenderer)renderer), event.getEntityModels()));
