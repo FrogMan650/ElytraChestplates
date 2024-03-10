@@ -15,7 +15,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "minecraft:diamond_elytra_chestplate_smithing"
+        "recipe": "minecraft:diamond_elytra_chestplate_smithing_elytra"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -28,7 +28,7 @@
   ],
   "rewards": {
     "recipes": [
-      "minecraft:diamond_elytra_chestplate_smithing"
+      "minecraft:diamond_elytra_chestplate_smithing_elytra"
     ]
   }
 }

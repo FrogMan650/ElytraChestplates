@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "minecraft:netherite_ingot"
+  },
+  "base": {
+    "item": "elytrachestplates:diamond_elytra_chestplate"
+  },
+  "result": {
+    "item": "elytrachestplates:netherite_elytra_chestplate"
+  },
+  "template": {
+    "item": "minecraft:netherite_upgrade_smithing_template"
+  }
+}

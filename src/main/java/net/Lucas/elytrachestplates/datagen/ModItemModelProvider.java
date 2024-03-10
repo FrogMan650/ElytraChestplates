@@ -39,11 +39,8 @@ public class ModItemModelProvider extends ItemModelProvider {
     @Override
     protected void registerModels() {
         simpleItem(ModItems.ELYTRA_UPGRADE_SMITHING_TEMPLATE);
-        //handheldItem(ModItems.OPAL_SWORD);
-        trimmedArmorItem(ModItems.DIAMOND_ELYTYRA_CHESTPLATE);
+        trimmedArmorItem(ModItems.DIAMOND_ELYTRA_CHESTPLATE);
         trimmedArmorItem(ModItems.NETHERITE_ELYTRA_CHESTPLATE);
-
-
     }
 
     private ItemModelBuilder simpleItem(RegistryObject<Item> item) {

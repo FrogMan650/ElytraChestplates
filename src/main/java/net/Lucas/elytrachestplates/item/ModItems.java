@@ -18,7 +18,7 @@ public class ModItems {
     //Epic = light_purple text
     //when enchanted they go up a rarity tier
 
-    public static final RegistryObject<Item> DIAMOND_ELYTYRA_CHESTPLATE = ITEMS.register("diamond_elytra_chestplate",
+    public static final RegistryObject<Item> DIAMOND_ELYTRA_CHESTPLATE = ITEMS.register("diamond_elytra_chestplate",
             () -> new DiamondElytraChestplate(ArmorMaterials.DIAMOND, ArmorItem.Type.CHESTPLATE, new Item.Properties().rarity(Rarity.UNCOMMON)));
     public static final RegistryObject<Item> NETHERITE_ELYTRA_CHESTPLATE = ITEMS.register("netherite_elytra_chestplate",
             () -> new NetheriteElytraChestplate(ArmorMaterials.NETHERITE, ArmorItem.Type.CHESTPLATE, new Item.Properties().rarity(Rarity.UNCOMMON).fireResistant()));

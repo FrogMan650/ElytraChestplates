@@ -19,6 +19,6 @@ public class ModItemTagGenerator extends ItemTagsProvider {
 
     @Override
     protected void addTags(HolderLookup.Provider pProvider) {
-        this.tag(ItemTags.TRIMMABLE_ARMOR).add(ModItems.DIAMOND_ELYTYRA_CHESTPLATE.get(), ModItems.NETHERITE_ELYTRA_CHESTPLATE.get());
+        this.tag(ItemTags.TRIMMABLE_ARMOR).add(ModItems.DIAMOND_ELYTRA_CHESTPLATE.get(), ModItems.NETHERITE_ELYTRA_CHESTPLATE.get());
     }
 }

@@ -19,7 +19,7 @@ public class ModCreativeModeTabs {
                     .title(Component.translatable("creativetab.elytrachestplates.elytra_tab"))
                     .displayItems((pParameters, pOutput) -> {
                         pOutput.accept(Items.ELYTRA);
-                        pOutput.accept(ModItems.DIAMOND_ELYTYRA_CHESTPLATE.get());
+                        pOutput.accept(ModItems.DIAMOND_ELYTRA_CHESTPLATE.get());
                         pOutput.accept(ModItems.NETHERITE_ELYTRA_CHESTPLATE.get());
                         pOutput.accept(ModItems.ELYTRA_UPGRADE_SMITHING_TEMPLATE.get());
                     }).build());
