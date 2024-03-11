@@ -1,0 +1,11 @@
+{
+  "creativetab.elytrachestplates.elytra_tab": "鞘翅之甲",
+  "item.elytrachestplates.diamond_elytra_chestplate": "钻石鞘翅胸甲",
+  "item.elytrachestplates.netherite_elytra_chestplate": "下界合金鞘翅胸甲",
+
+  "item.elytrachestplates.elytra_smithing_template": "§e锻造模板",
+  "item.elytrachestplates.smithing_template.elytra_upgrade": "钻石或下界合金胸甲",
+  "upgrade.elytrachestplates.elytra_upgrade": "鞘翅胸甲升级",
+  "item.elytrachestplates.smithing_template.elytra_upgrade.base_slot_description": "添加钻石或下界合金胸甲",
+  "item.elytrachestplates.smithing_template.elytra_upgrade.additions_slot_description": "添加鞘翅"
+}
