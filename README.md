@@ -12,3 +12,7 @@ Other things to note:
 * Flight stops working at 10% durability left
 * Fully customizable with Armor Trims
 * Unbreaking reduces durability usage similar to an Elytra
+
+Translations available:
+* 26 - English (US)
+* 126 - 简体中文（中国大陆) (Chinese Simplified (China; Mandarin)) Thanks to Huantanhua (Buttercup) on GitHub!
