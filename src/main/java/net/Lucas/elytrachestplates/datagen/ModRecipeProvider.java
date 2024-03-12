@@ -8,6 +8,7 @@ import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.common.crafting.conditions.IConditionBuilder;
+import org.jetbrains.annotations.NotNull;
 
 public class ModRecipeProvider extends RecipeProvider implements IConditionBuilder {
     public ModRecipeProvider(PackOutput pOutput) {
@@ -15,7 +16,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
     }
 
     @Override
-    protected void buildRecipes(RecipeOutput pRecipeOutput) {
+    protected void buildRecipes(@NotNull RecipeOutput pRecipeOutput) {
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.ELYTRA_UPGRADE_SMITHING_TEMPLATE.get(), 2)
                 .pattern("SAS")
                 .pattern("SBS")
@@ -27,12 +28,12 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .save(pRecipeOutput);
         
 
-        netheriteSmithing(pRecipeOutput, ModItems.ELYTRA_UPGRADE_SMITHING_TEMPLATE.get(), Items.DIAMOND_CHESTPLATE, Items.ELYTRA, RecipeCategory.MISC, ModItems.DIAMOND_ELYTRA_CHESTPLATE.get());
-        netheriteSmithing(pRecipeOutput, ModItems.ELYTRA_UPGRADE_SMITHING_TEMPLATE.get(), Items.NETHERITE_CHESTPLATE, Items.ELYTRA, RecipeCategory.MISC, ModItems.NETHERITE_ELYTRA_CHESTPLATE.get());
-        netheriteSmithing(pRecipeOutput, Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE, ModItems.DIAMOND_ELYTRA_CHESTPLATE.get(), Items.NETHERITE_INGOT, RecipeCategory.MISC, ModItems.NETHERITE_ELYTRA_CHESTPLATE.get());
+        netheriteSmithing(pRecipeOutput, ModItems.ELYTRA_UPGRADE_SMITHING_TEMPLATE.get(), Items.DIAMOND_CHESTPLATE, Items.ELYTRA, ModItems.DIAMOND_ELYTRA_CHESTPLATE.get());
+        netheriteSmithing(pRecipeOutput, ModItems.ELYTRA_UPGRADE_SMITHING_TEMPLATE.get(), Items.NETHERITE_CHESTPLATE, Items.ELYTRA, ModItems.NETHERITE_ELYTRA_CHESTPLATE.get());
+        netheriteSmithing(pRecipeOutput, Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE, ModItems.DIAMOND_ELYTRA_CHESTPLATE.get(), Items.NETHERITE_INGOT, ModItems.NETHERITE_ELYTRA_CHESTPLATE.get());
     }
 
-    protected static void netheriteSmithing(RecipeOutput pRecipeOutput, Item modTemplate, Item itemToUpgrade, Item itemToUpgradeWith, RecipeCategory pCategory, Item pResultItem) {
-        SmithingTransformRecipeBuilder.smithing(Ingredient.of(modTemplate), Ingredient.of(itemToUpgrade), Ingredient.of(itemToUpgradeWith), pCategory, pResultItem).unlocks("has_netherite_ingot", has(itemToUpgradeWith)).save(pRecipeOutput, getItemName(pResultItem) + "_smithing_" + getItemName(itemToUpgradeWith));
+    protected static void netheriteSmithing(RecipeOutput pRecipeOutput, Item modTemplate, Item itemToUpgrade, Item itemToUpgradeWith, Item pResultItem) {
+        SmithingTransformRecipeBuilder.smithing(Ingredient.of(modTemplate), Ingredient.of(itemToUpgrade), Ingredient.of(itemToUpgradeWith), RecipeCategory.MISC, pResultItem).unlocks("has_netherite_ingot", has(itemToUpgradeWith)).save(pRecipeOutput, getItemName(pResultItem) + "_smithing_" + getItemName(itemToUpgradeWith));
     }
 }

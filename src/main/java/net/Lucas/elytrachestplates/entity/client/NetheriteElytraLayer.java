@@ -21,6 +21,7 @@ import net.minecraft.world.entity.player.PlayerModelPart;
 import net.minecraft.world.item.ItemStack;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
+import org.jetbrains.annotations.NotNull;
 
 @OnlyIn(Dist.CLIENT)
 public class NetheriteElytraLayer<T extends LivingEntity, M extends EntityModel<T>> extends RenderLayer<T, M> {
@@ -32,22 +33,22 @@ public class NetheriteElytraLayer<T extends LivingEntity, M extends EntityModel<
       this.elytraModel = new NetheriteElytraModel<>(pModelSet.bakeLayer(DiamondElytraModel.WINGS_LAYER_LOCATION));
    }
 
-   public void render(PoseStack pMatrixStack, MultiBufferSource pBuffer, int pPackedLight, T pLivingEntity, float pLimbSwing, float pLimbSwingAmount, float pPartialTicks, float pAgeInTicks, float pNetHeadYaw, float pHeadPitch) {
+   @Override
+   public void render(@NotNull PoseStack pMatrixStack, @NotNull MultiBufferSource pBuffer, int pPackedLight, T pLivingEntity, float pLimbSwing, float pLimbSwingAmount, float pPartialTicks, float pAgeInTicks, float pNetHeadYaw, float pHeadPitch) {
       ItemStack itemstack = pLivingEntity.getItemBySlot(EquipmentSlot.CHEST);
-      if (shouldRender(itemstack, pLivingEntity)) {
+      if (shouldRender(itemstack)) {
          ResourceLocation resourcelocation;
-         if (pLivingEntity instanceof AbstractClientPlayer) {
-            AbstractClientPlayer abstractclientplayer = (AbstractClientPlayer)pLivingEntity;
+         if (pLivingEntity instanceof AbstractClientPlayer abstractclientplayer) {
             PlayerSkin playerskin = abstractclientplayer.getSkin();
             if (playerskin.elytraTexture() != null) {
                resourcelocation = playerskin.elytraTexture();
             } else if (playerskin.capeTexture() != null && abstractclientplayer.isModelPartShown(PlayerModelPart.CAPE)) {
                resourcelocation = playerskin.capeTexture();
             } else {
-               resourcelocation = getElytraTexture(itemstack, pLivingEntity);
+               resourcelocation = getElytraTexture();
             }
          } else {
-            resourcelocation = getElytraTexture(itemstack, pLivingEntity);
+            resourcelocation = getElytraTexture();
          }
 
          pMatrixStack.pushPose();
@@ -60,9 +61,9 @@ public class NetheriteElytraLayer<T extends LivingEntity, M extends EntityModel<
       }
    }
 
-   public boolean shouldRender(ItemStack stack, T entity) { return stack.getItem() == ModItems.NETHERITE_ELYTRA_CHESTPLATE.get(); }
+   public boolean shouldRender(ItemStack stack) { return stack.getItem() == ModItems.NETHERITE_ELYTRA_CHESTPLATE.get(); }
 
-   public ResourceLocation getElytraTexture(ItemStack stack, T entity) {
+   public ResourceLocation getElytraTexture() {
       return WINGS_LOCATION;
    }
 }
