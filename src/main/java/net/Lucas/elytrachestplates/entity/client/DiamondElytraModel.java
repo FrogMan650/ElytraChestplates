@@ -13,6 +13,7 @@ import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.phys.Vec3;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
+import org.jetbrains.annotations.NotNull;
 
 @OnlyIn(Dist.CLIENT)
 public class DiamondElytraModel<T extends LivingEntity> extends AgeableListModel<T> {
@@ -34,14 +35,17 @@ public class DiamondElytraModel<T extends LivingEntity> extends AgeableListModel
       return LayerDefinition.create(meshdefinition, 64, 32);
    }
 
-   protected Iterable<ModelPart> headParts() {
+   @Override
+   protected @NotNull Iterable<ModelPart> headParts() {
       return ImmutableList.of();
    }
 
-   protected Iterable<ModelPart> bodyParts() {
+   @Override
+   protected @NotNull Iterable<ModelPart> bodyParts() {
       return ImmutableList.of(this.leftWing, this.rightWing);
    }
 
+   @Override
    public void setupAnim(T pEntity, float pLimbSwing, float pLimbSwingAmount, float pAgeInTicks, float pNetHeadYaw, float pHeadPitch) {
       float f = 0.2617994F;
       float f1 = -0.2617994F;

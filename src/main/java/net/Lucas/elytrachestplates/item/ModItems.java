@@ -11,13 +11,6 @@ public class ModItems {
     public static final DeferredRegister<Item> ITEMS =
             DeferredRegister.create(ForgeRegistries.ITEMS, ElytraChestplates.MOD_ID);
 
-    //https://www.reddit.com/r/Minecraft/comments/c0z2jn/color_guide_youre_welcome/
-    //Common = white text
-    //Uncommon = yellow text
-    //Rare = aqua text
-    //Epic = light_purple text
-    //when enchanted they go up a rarity tier
-
     public static final RegistryObject<Item> DIAMOND_ELYTRA_CHESTPLATE = ITEMS.register("diamond_elytra_chestplate",
             () -> new DiamondElytraChestplate(ArmorMaterials.DIAMOND, ArmorItem.Type.CHESTPLATE, new Item.Properties().rarity(Rarity.UNCOMMON)));
     public static final RegistryObject<Item> NETHERITE_ELYTRA_CHESTPLATE = ITEMS.register("netherite_elytra_chestplate",
