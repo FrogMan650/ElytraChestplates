@@ -1,25 +1,25 @@
-[09Mar2024 20:09:24.893] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher running: args [--launchTarget, forge_userdev_data, --assetIndex, 12, --assetsDir, C:\Users\Lucas\.gradle\caches\forge_gradle\assets, --gameDir, ., --mod, elytrachestplates, --all, --output, C:\Users\Lucas\Desktop\ElytraChestplates\src\generated\resources, --existing, C:\Users\Lucas\Desktop\ElytraChestplates\src\main\resources]
-[09Mar2024 20:09:24.896] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: JVM identified as Eclipse Adoptium OpenJDK 64-Bit Server VM 17.0.9+9
-[09Mar2024 20:09:24.897] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher 10.1.2 starting: java version 17.0.9 by Eclipse Adoptium; OS Windows 10 arch amd64 version 10.0
-[09Mar2024 20:09:25.003] [main/INFO] [net.minecraftforge.fml.loading.ImmediateWindowHandler/]: ImmediateWindowProvider not loading because launch target is forge_userdev_data
-[09Mar2024 20:09:25.098] [main/INFO] [mixin/]: SpongePowered MIXIN Subsystem Version=0.8.5 Source=jar:file:///C:/Users/Lucas/.gradle/caches/modules-2/files-2.1/org.spongepowered/mixin/0.8.5/9d1c0c3a304ae6697ecd477218fa61b850bf57fc/mixin-0.8.5.jar!/ Service=ModLauncher Env=UNKNOWN
-[09Mar2024 20:09:25.713] [main/INFO] [net.minecraftforge.fml.loading.moddiscovery.JarInJarDependencyLocator/]: No dependencies to load found. Skipping!
-[09Mar2024 20:09:26.689] [main/INFO] [cpw.mods.modlauncher.LaunchServiceHandler/MODLAUNCHER]: Launching target 'forge_userdev_data' with arguments [--gameDir, ., --assetsDir, C:\Users\Lucas\.gradle\caches\forge_gradle\assets, --assetIndex, 12, --mod, elytrachestplates, --all, --output, C:\Users\Lucas\Desktop\ElytraChestplates\src\generated\resources, --existing, C:\Users\Lucas\Desktop\ElytraChestplates\src\main\resources]
-[09Mar2024 20:09:31.818] [modloading-worker-0/INFO] [net.minecraftforge.common.ForgeMod/FORGEMOD]: Forge mod loading, version 49.0.31, for MC 1.20.4 with MCP 20231207.112700
-[09Mar2024 20:09:31.821] [modloading-worker-0/INFO] [net.minecraftforge.common.MinecraftForge/FORGE]: MinecraftForge v49.0.31 Initialized
-[09Mar2024 20:09:31.882] [modloading-worker-0/INFO] [net.minecraftforge.common.ForgeMod/FORGEMOD]: Opening jdk.naming.dns/com.sun.jndi.dns to java.naming
-[09Mar2024 20:09:32.253] [main/INFO] [net.minecraftforge.data.loading.DatagenModLoader/]: Initializing Data Gatherer for mods [elytrachestplates]
-[09Mar2024 20:09:32.314] [main/WARN] [net.minecraft.server.packs.VanillaPackResourcesBuilder/]: Assets URL 'union:/C:/Users/Lucas/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.20.4-49.0.31_mapped_parchment_1.20.3-2023.12.31-1.20.4/forge-1.20.4-49.0.31_mapped_parchment_1.20.3-2023.12.31-1.20.4-recomp.jar%2316!/assets/.mcassetsroot' uses unexpected schema
-[09Mar2024 20:09:32.315] [main/WARN] [net.minecraft.server.packs.VanillaPackResourcesBuilder/]: Assets URL 'union:/C:/Users/Lucas/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.20.4-49.0.31_mapped_parchment_1.20.3-2023.12.31-1.20.4/forge-1.20.4-49.0.31_mapped_parchment_1.20.3-2023.12.31-1.20.4-recomp.jar%2316!/data/.mcassetsroot' uses unexpected schema
-[09Mar2024 20:09:32.463] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Recipes
-[09Mar2024 20:09:32.524] [main/INFO] [net.minecraft.data.DataGenerator/]: Recipes finished after 60 ms
-[09Mar2024 20:09:32.524] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Item Models: elytrachestplates
-[09Mar2024 20:09:32.547] [main/INFO] [net.minecraft.data.DataGenerator/]: Item Models: elytrachestplates finished after 22 ms
-[09Mar2024 20:09:32.547] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Global Loot Modifiers : elytrachestplates
-[09Mar2024 20:09:32.552] [main/INFO] [net.minecraft.data.DataGenerator/]: Global Loot Modifiers : elytrachestplates finished after 4 ms
-[09Mar2024 20:09:32.552] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Tags for minecraft:block mod id elytrachestplates
-[09Mar2024 20:09:32.648] [main/INFO] [net.minecraft.data.DataGenerator/]: Tags for minecraft:block mod id elytrachestplates finished after 95 ms
-[09Mar2024 20:09:32.648] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Tags for minecraft:item mod id elytrachestplates
-[09Mar2024 20:09:32.654] [main/INFO] [net.minecraft.data.DataGenerator/]: Tags for minecraft:item mod id elytrachestplates finished after 6 ms
-[09Mar2024 20:09:32.655] [main/INFO] [net.minecraft.data.DataGenerator/]: All providers took: 191 ms
-[09Mar2024 20:09:32.665] [main/INFO] [net.minecraft.data.HashCache/]: Caching: total files: 34, old count: 32, new count: 35, removed stale: 0, written: 2
+[12Mar2024 14:00:47.985] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher running: args [--launchTarget, forge_userdev_data, --assetIndex, 12, --assetsDir, C:\Users\Lucas\.gradle\caches\forge_gradle\assets, --gameDir, ., --mod, elytrachestplates, --all, --output, C:\Users\Lucas\Desktop\ElytraChestplates\src\generated\resources, --existing, C:\Users\Lucas\Desktop\ElytraChestplates\src\main\resources]
+[12Mar2024 14:00:47.987] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: JVM identified as Eclipse Adoptium OpenJDK 64-Bit Server VM 17.0.9+9
+[12Mar2024 14:00:47.988] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher 10.1.2 starting: java version 17.0.9 by Eclipse Adoptium; OS Windows 10 arch amd64 version 10.0
+[12Mar2024 14:00:48.098] [main/INFO] [net.minecraftforge.fml.loading.ImmediateWindowHandler/]: ImmediateWindowProvider not loading because launch target is forge_userdev_data
+[12Mar2024 14:00:48.239] [main/INFO] [mixin/]: SpongePowered MIXIN Subsystem Version=0.8.5 Source=jar:file:///C:/Users/Lucas/.gradle/caches/modules-2/files-2.1/org.spongepowered/mixin/0.8.5/9d1c0c3a304ae6697ecd477218fa61b850bf57fc/mixin-0.8.5.jar!/ Service=ModLauncher Env=UNKNOWN
+[12Mar2024 14:00:48.997] [main/INFO] [net.minecraftforge.fml.loading.moddiscovery.JarInJarDependencyLocator/]: No dependencies to load found. Skipping!
+[12Mar2024 14:00:50.066] [main/INFO] [cpw.mods.modlauncher.LaunchServiceHandler/MODLAUNCHER]: Launching target 'forge_userdev_data' with arguments [--gameDir, ., --assetsDir, C:\Users\Lucas\.gradle\caches\forge_gradle\assets, --assetIndex, 12, --mod, elytrachestplates, --all, --output, C:\Users\Lucas\Desktop\ElytraChestplates\src\generated\resources, --existing, C:\Users\Lucas\Desktop\ElytraChestplates\src\main\resources]
+[12Mar2024 14:00:55.261] [modloading-worker-0/INFO] [net.minecraftforge.common.ForgeMod/FORGEMOD]: Forge mod loading, version 49.0.31, for MC 1.20.4 with MCP 20231207.112700
+[12Mar2024 14:00:55.264] [modloading-worker-0/INFO] [net.minecraftforge.common.MinecraftForge/FORGE]: MinecraftForge v49.0.31 Initialized
+[12Mar2024 14:00:55.319] [modloading-worker-0/INFO] [net.minecraftforge.common.ForgeMod/FORGEMOD]: Opening jdk.naming.dns/com.sun.jndi.dns to java.naming
+[12Mar2024 14:00:55.792] [main/INFO] [net.minecraftforge.data.loading.DatagenModLoader/]: Initializing Data Gatherer for mods [elytrachestplates]
+[12Mar2024 14:00:55.871] [main/WARN] [net.minecraft.server.packs.VanillaPackResourcesBuilder/]: Assets URL 'union:/C:/Users/Lucas/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.20.4-49.0.31_mapped_parchment_1.20.3-2023.12.31-1.20.4/forge-1.20.4-49.0.31_mapped_parchment_1.20.3-2023.12.31-1.20.4-recomp.jar%2316!/assets/.mcassetsroot' uses unexpected schema
+[12Mar2024 14:00:55.872] [main/WARN] [net.minecraft.server.packs.VanillaPackResourcesBuilder/]: Assets URL 'union:/C:/Users/Lucas/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.20.4-49.0.31_mapped_parchment_1.20.3-2023.12.31-1.20.4/forge-1.20.4-49.0.31_mapped_parchment_1.20.3-2023.12.31-1.20.4-recomp.jar%2316!/data/.mcassetsroot' uses unexpected schema
+[12Mar2024 14:00:56.040] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Recipes
+[12Mar2024 14:00:56.098] [main/INFO] [net.minecraft.data.DataGenerator/]: Recipes finished after 57 ms
+[12Mar2024 14:00:56.099] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Item Models: elytrachestplates
+[12Mar2024 14:00:56.107] [main/INFO] [net.minecraft.data.DataGenerator/]: Item Models: elytrachestplates finished after 8 ms
+[12Mar2024 14:00:56.107] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Global Loot Modifiers : elytrachestplates
+[12Mar2024 14:00:56.111] [main/INFO] [net.minecraft.data.DataGenerator/]: Global Loot Modifiers : elytrachestplates finished after 3 ms
+[12Mar2024 14:00:56.111] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Tags for minecraft:block mod id elytrachestplates
+[12Mar2024 14:00:56.236] [main/INFO] [net.minecraft.data.DataGenerator/]: Tags for minecraft:block mod id elytrachestplates finished after 124 ms
+[12Mar2024 14:00:56.236] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Tags for minecraft:item mod id elytrachestplates
+[12Mar2024 14:00:56.243] [main/INFO] [net.minecraft.data.DataGenerator/]: Tags for minecraft:item mod id elytrachestplates finished after 7 ms
+[12Mar2024 14:00:56.243] [main/INFO] [net.minecraft.data.DataGenerator/]: All providers took: 203 ms
+[12Mar2024 14:00:56.249] [main/INFO] [net.minecraft.data.HashCache/]: Caching: total files: 12, old count: 12, new count: 13, removed stale: 0, written: 0

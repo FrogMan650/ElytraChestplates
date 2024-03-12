@@ -22,7 +22,7 @@ public class ModEventBusClientEvents {
         event.registerLayerDefinition(NetheriteElytraModel.WINGS_LAYER_LOCATION, NetheriteElytraModel::createLayer);
     }
 
-    @SubscribeEvent @SuppressWarnings({"unchecked"})
+    @SubscribeEvent @SuppressWarnings({"unchecked", "rawtypes"})
     public static void addPlayerLayers(EntityRenderersEvent.AddLayers event) {
         for (PlayerSkin.Model skin : event.getSkins()) {
 

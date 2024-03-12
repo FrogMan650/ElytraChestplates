@@ -1,7 +1,6 @@
 package net.Lucas.elytrachestplates.item;
 
 import net.minecraft.util.RandomSource;
-import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.item.ArmorItem;
 import net.minecraft.world.item.ArmorMaterial;
 import net.minecraft.world.item.ItemStack;

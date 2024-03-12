@@ -60,9 +60,7 @@ public class DiamondElytraLayer<T extends LivingEntity, M extends EntityModel<T>
       }
    }
 
-   public boolean shouldRender(ItemStack stack, T entity) {
-       return entity.getItemBySlot(EquipmentSlot.CHEST).getItem() == ModItems.DIAMOND_ELYTRA_CHESTPLATE.get();
-   }
+   public boolean shouldRender(ItemStack stack, T entity) { return stack.getItem() == ModItems.DIAMOND_ELYTRA_CHESTPLATE.get(); }
 
    public ResourceLocation getElytraTexture(ItemStack stack, T entity) {
       return WINGS_LOCATION;

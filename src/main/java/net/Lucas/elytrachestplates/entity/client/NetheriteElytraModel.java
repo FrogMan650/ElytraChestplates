@@ -42,9 +42,6 @@ public class NetheriteElytraModel<T extends LivingEntity> extends AgeableListMod
       return ImmutableList.of(this.leftWing, this.rightWing);
    }
 
-   /**
-    * Sets this entity's model rotation angles
-    */
    public void setupAnim(T pEntity, float pLimbSwing, float pLimbSwingAmount, float pAgeInTicks, float pNetHeadYaw, float pHeadPitch) {
       float f = 0.2617994F;
       float f1 = -0.2617994F;
