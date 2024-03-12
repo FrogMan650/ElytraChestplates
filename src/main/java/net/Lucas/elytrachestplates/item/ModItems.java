@@ -22,7 +22,8 @@ public class ModItems {
             () -> new DiamondElytraChestplate(ArmorMaterials.DIAMOND, ArmorItem.Type.CHESTPLATE, new Item.Properties().rarity(Rarity.UNCOMMON)));
     public static final RegistryObject<Item> NETHERITE_ELYTRA_CHESTPLATE = ITEMS.register("netherite_elytra_chestplate",
             () -> new NetheriteElytraChestplate(ArmorMaterials.NETHERITE, ArmorItem.Type.CHESTPLATE, new Item.Properties().rarity(Rarity.UNCOMMON).fireResistant()));
-    public static final RegistryObject<Item> ELYTRA_UPGRADE_SMITHING_TEMPLATE = ITEMS.register("elytra_upgrade_smithing_template", CustomSmithingTemplateItem::createElytraChestplateUpgradeTemplate);
+    public static final RegistryObject<Item> ELYTRA_UPGRADE_SMITHING_TEMPLATE = ITEMS.register(
+            "elytra_upgrade_smithing_template", CustomSmithingTemplateItem::createElytraChestplateUpgradeTemplate);
 
 
     public static void register(IEventBus eventBus) {

@@ -5,8 +5,11 @@ import net.Lucas.elytrachestplates.entity.client.DiamondElytraLayer;
 import net.Lucas.elytrachestplates.entity.client.DiamondElytraModel;
 import net.Lucas.elytrachestplates.entity.client.NetheriteElytraLayer;
 import net.Lucas.elytrachestplates.entity.client.NetheriteElytraModel;
+import net.minecraft.client.model.EntityModel;
 import net.minecraft.client.renderer.entity.LivingEntityRenderer;
 import net.minecraft.world.entity.EntityType;
+import net.minecraft.world.entity.decoration.ArmorStand;
+import net.minecraft.world.entity.player.Player;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.client.event.EntityRenderersEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -20,20 +23,20 @@ public class ModEventBusClientEvents {
         event.registerLayerDefinition(NetheriteElytraModel.WINGS_LAYER_LOCATION, NetheriteElytraModel::createLayer);
     }
 
-    @SubscribeEvent @SuppressWarnings({"unchecked"})
+    @SubscribeEvent @SuppressWarnings({"unchecked", "rawtypes"})
     public static void addPlayerLayers(EntityRenderersEvent.AddLayers event) {
         for (String skin : event.getSkins()) {
-            LivingEntityRenderer renderer = event.getSkin(skin);
+            LivingEntityRenderer<? extends Player, ? extends EntityModel<? extends Player>> renderer = event.getSkin(skin);
 
             if (renderer != null) {
                 renderer.addLayer(new DiamondElytraLayer(renderer, event.getEntityModels()));
                 renderer.addLayer(new NetheriteElytraLayer(renderer, event.getEntityModels()));
             }
         }
-        LivingEntityRenderer renderer = event.getRenderer(EntityType.ARMOR_STAND);
+        LivingEntityRenderer<ArmorStand, ? extends EntityModel<ArmorStand>> renderer = event.getRenderer(EntityType.ARMOR_STAND);
         if (renderer != null) {
-            ((LivingEntityRenderer)renderer).addLayer(new DiamondElytraLayer(((LivingEntityRenderer)renderer), event.getEntityModels()));
-            ((LivingEntityRenderer)renderer).addLayer(new NetheriteElytraLayer(((LivingEntityRenderer)renderer), event.getEntityModels()));
+            renderer.addLayer(new DiamondElytraLayer(renderer, event.getEntityModels()));
+            renderer.addLayer(new NetheriteElytraLayer(renderer, event.getEntityModels()));
         }
     }
 
