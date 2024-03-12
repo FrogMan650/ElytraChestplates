@@ -3,7 +3,6 @@ package net.Lucas.elytrachestplates.entity.client;
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.vertex.VertexConsumer;
 import net.Lucas.elytrachestplates.ElytraChestplates;
-import net.Lucas.elytrachestplates.item.ModItems;
 import net.minecraft.client.model.EntityModel;
 import net.minecraft.client.model.geom.EntityModelSet;
 import net.minecraft.client.player.AbstractClientPlayer;
@@ -58,9 +57,7 @@ public class DiamondElytraLayer<T extends LivingEntity, M extends EntityModel<T>
       }
    }
 
-   public boolean shouldRender(ItemStack stack, T entity) {
-       return entity.getItemBySlot(EquipmentSlot.CHEST).getItem() == ModItems.DIAMOND_ELYTRA_CHESTPLATE.get();
-   }
+   public boolean shouldRender(ItemStack stack, T entity) { return entity.getItemBySlot(EquipmentSlot.CHEST) == stack; }
 
    public ResourceLocation getElytraTexture(ItemStack stack, T entity) {
       return WINGS_LOCATION;

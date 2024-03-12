@@ -58,9 +58,7 @@ public class NetheriteElytraLayer<T extends LivingEntity, M extends EntityModel<
       }
    }
 
-   public boolean shouldRender(ItemStack stack, T entity) {
-       return entity.getItemBySlot(EquipmentSlot.CHEST).getItem() == ModItems.NETHERITE_ELYTRA_CHESTPLATE.get();
-   }
+   public boolean shouldRender(ItemStack stack, T entity) { return entity.getItemBySlot(EquipmentSlot.CHEST) == stack; }
 
    public ResourceLocation getElytraTexture(ItemStack stack, T entity) {
       return WINGS_LOCATION;
